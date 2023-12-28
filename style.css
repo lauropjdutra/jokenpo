@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Rubik+Doodle+Shadow&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik";
+}
+
+body {
+  background: linear-gradient(230deg, #ffffffda, #ffffffd8), url("./assets/bg.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  padding-top: 50px;
+  color: #0a5fa5;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 50px;
+  text-shadow: 0px 0px 10px #dbdeffec;
+}
+
+main {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.top-container, .bottom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  color: #0D0D0D;
+  width: 105px;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.score-box {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.user-name, .machine-name {
+  width: 110px;
+  word-wrap: break-word;
+  color: #403E8C;
+  font-size: 18px;
+}
+
+.user-name {
+  text-align: right;
+}
+
+h4 {
+  color: #403E8C;
+  font-size: 18px;
+  margin: 20px;
+}
+
+.choice-name {
+  font-size: 12px;
+  color: #444444;
+  text-align: center;
+}
+
+.choice-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.choice-display {
+  display: flex;
+  gap: 10px;
+}
+
+.user-choice, .machine-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #999999;
+  border-radius: 10px;
+}
+
+.user-choice img, .machine-choice img {
+  width: 50px;
+  opacity: 0.8;
+  visibility: hidden;
+}
+
+button img {
+  width: 140px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 10px;
+  border: 1px solid #999999;
+  background: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #eeeeeea1;
+  scale: 1.1;
+}
+
+button:active {
+  scale: 1;
+  opacity: 0.3;
+}
+
+.initialize-container {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#f3f3f3e7, #dadadadc);
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  backdrop-filter: blur(5px);
+}
+
+#label-username {
+  font-size: 19px;
+}
+
+#username {
+  padding: 13px 10px;
+  margin-bottom: 30px;
+  background: #fefefeaf;
+  color: #403E8C;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #403E8C;
+  border-radius: 10px;
+  outline: #403E8C;
+}
+
+#username::placeholder {
+  color: #403E8C;
+  opacity: 0.7;
+}
+
+.opponent-box {
+  display: flex;
+  gap: 10px;
+}
+
+.opponent-box button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #403E8C;
+  border: 1px solid #403E8C;
+  background: #fefefeaf;
+  font-size: 18px;
+}
+
+.opponent-box button:hover {
+  scale: 1;
+}
+
+.opponent-box img {
+  width: 30px;
+  margin-right: 5px;
+}
+
+#chatgpt img {
+  width: 28px;
+  margin-right: 7px;
+}
+
+.start-btn {
+  margin-top: 40px;
+  padding: 17px 22px;
+  border-radius: 10px;
+  border: none;
+  font-size: 19px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #eeeeee;
+  background: #403E8C;
+}
+
+.start-btn:hover {
+  color: #eeeeee;
+  background: #0a5fa5;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background: #0a5fa5;
+  color: #dee6ff;
+}
+
+.copy {
+  font-weight: 100;
+  font-size: 16px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 600px) {
+  .opponent-box {
+    width: 300px;    
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .buttons {
+    width: 320px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  button img {
+    width: 120px;
+  }
+}

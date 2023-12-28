@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/paper.png" type="image/x-icon" />
+    <title>Jokenpô Online</title>
+  </head>
+  <body>
+    <header>
+      <h1 title="Jokenpô">JokenPô</h1>
+    </header>
+    <main>
+      <section class="top-container">
+        <div class="score-box">
+          <h3 class="user-name">Você</h3>
+          <div class="score">
+            <h2 title="Placar">
+              <span class="user-score">0</span> x
+              <span class="machine-score">0</span>
+            </h2>
+          </div>
+          <h3 class="machine-name">Máquina</h3>
+        </div>
+        <div class="choice-box">
+          <div class="choice-display">
+            <div class="user-choice" title="Escolha do usuário">
+              <h3 class="choice-name">Sua escolha</h3>
+              <img
+                class="user-choice-img"
+                src="./assets/paper.png"
+                alt="Escolha do usuário"
+                title="Escolha do usuário"
+              />
+            </div>
+            <div class="machine-choice" title="Escolha da máquina">
+              <h3 class="choice-name">Máquina</h3>
+              <img
+                class="machine-choice-img"
+                src="./assets/rock.png"
+                alt="Escolha da máquina"
+                title="Escolha da máquina"
+              />
+            </div>
+          </div>
+          <h4 class="result">Faça sua escolha. Boa sorte!</h4>
+        </div>
+      </section>
+      <section class="bottom-container">
+        <div class="buttons">
+          <button class="rock" title="Pedra">
+            <img src="./assets/rock.png" alt="Pedra" />
+          </button>
+          <button class="paper" title="Papel">
+            <img src="./assets/paper.png" alt="Papel" />
+          </button>
+          <button class="scissors" title="Tesoura">
+            <img src="./assets/scissors.png" alt="Tesoura" />
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h3 class="copy">
+        Copyright &copy; 2023 - Desenvolvido por
+        <a href="https://www.github.com/lauropjdutra/" target="_blank" title="Lauro Dutra | GitHub"
+          >Lauro Dutra</a
+        >
+      </h3>
+    </footer>
+    <section class="initialize-container">
+      <h3 id="label-username"><label for="username">Quem está jogando?</label></h3>
+      <input type="text" id="username" name="username" maxlength="20" placeholder="Digite seu nome" autocomplete="off" title="Digite seu nome">
+      <h3>Escolha seu oponente:</h3>
+      <div class="opponent-box">
+        <button id="alexa" title="Alexa"><img src="./assets/alexa.png" alt="Logo da Alexa">Alexa</button>
+        <button id="chatgpt" title="ChatGPT"><img src="./assets/chatGPT.png" alt="Logo do ChatGPT">ChatGPT</button>
+        <button id="devclub" title="DevClub GPT"><img src="./assets/devclubGPT.png" alt="Logo do DevClub GPT">DevClub GPT</button>
+        <button id="siri" title="Siri"><img src="./assets/siri.png" alt="Logo da Siri">Siri</button>
+      </div>
+      <button class="start-btn" title="Começar">Começar</button>
+    </section>
+  </body>
+</html>
