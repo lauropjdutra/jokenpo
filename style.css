@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Rubik+Doodle+Shadow&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Rubik+Doodle+Shadow&display=swap");
 
 * {
   margin: 0;
@@ -8,8 +8,10 @@
 }
 
 body {
-  background: linear-gradient(230deg, #ffffffda, #ffffffd8), url("./assets/bg.jpg");
+  background: linear-gradient(90deg, #ebefff00, #feffffd7, #edf6ff00),
+    url("./assets/bg.jpg");
   background-size: cover;
+  background-position: center;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -22,8 +24,10 @@ h1 {
   color: #0a5fa5;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Rubik Doodle Shadow";
   font-weight: 900;
   font-size: 50px;
+  letter-spacing: 2px;
   text-shadow: 0px 0px 10px #dbdeffec;
 }
 
@@ -35,7 +39,8 @@ main {
   justify-content: space-evenly;
 }
 
-.top-container, .bottom-container {
+.top-container,
+.bottom-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +48,7 @@ main {
 }
 
 .score {
-  color: #0D0D0D;
+  color: #0d0d0d;
   width: 105px;
   font-size: 25px;
   text-align: center;
@@ -56,10 +61,11 @@ main {
   gap: 2px;
 }
 
-.user-name, .machine-name {
+.user-name,
+.machine-name {
   width: 110px;
   word-wrap: break-word;
-  color: #403E8C;
+  color: #403e8c;
   font-size: 18px;
 }
 
@@ -68,7 +74,7 @@ main {
 }
 
 h4 {
-  color: #403E8C;
+  color: #403e8c;
   font-size: 18px;
   margin: 20px;
 }
@@ -88,10 +94,12 @@ h4 {
 
 .choice-display {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
-.user-choice, .machine-choice {
+.user-choice,
+.machine-choice {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,10 +111,33 @@ h4 {
   border-radius: 10px;
 }
 
-.user-choice img, .machine-choice img {
+.user-choice img,
+.machine-choice img {
   width: 50px;
   opacity: 0.8;
   visibility: hidden;
+}
+
+.restart-btn img {
+  width: 23px;
+}
+
+.restart-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #403e8c;
+  height: 50px;
+  color: #403e8c;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.restart-btn:hover {
+  opacity: 0.8;
+  scale: 1;
 }
 
 button img {
@@ -159,16 +190,16 @@ button:active {
   padding: 13px 10px;
   margin-bottom: 30px;
   background: #fefefeaf;
-  color: #403E8C;
+  color: #403e8c;
   font-size: 18px;
   text-align: center;
-  border: 1px solid #403E8C;
+  border: 1px solid #403e8c;
   border-radius: 10px;
-  outline: #403E8C;
+  outline: #403e8c;
 }
 
 #username::placeholder {
-  color: #403E8C;
+  color: #403e8c;
   opacity: 0.7;
 }
 
@@ -182,8 +213,8 @@ button:active {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  color: #403E8C;
-  border: 1px solid #403E8C;
+  color: #403e8c;
+  border: 1px solid #403e8c;
   background: #fefefeaf;
   font-size: 18px;
 }
@@ -211,7 +242,7 @@ button:active {
   font-weight: 500;
   text-transform: uppercase;
   color: #eeeeee;
-  background: #403E8C;
+  background: #403e8c;
 }
 
 .start-btn:hover {
@@ -246,9 +277,16 @@ a:active {
   opacity: 0.7;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
+  body {
+    background: linear-gradient(to bottom, #feffffe0, #edf6ff10),
+      url("./assets/bg.jpg");
+    background-size: cover;
+    background-position: right;
+  }
+
   .opponent-box {
-    width: 300px;    
+    width: 300px;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -257,6 +295,17 @@ a:active {
     width: 320px;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  button,
+  .user-choice,
+  .machine-choice {
+    background: #fcfcfca1;
+  }
+
+  button:hover {
+    background: #eeeeee;
+    scale: 0.9;
   }
 
   button img {

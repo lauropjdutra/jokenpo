@@ -17,6 +17,7 @@ const chatgpt = document.querySelector("#chatgpt");
 const devclub = document.querySelector("#devclub");
 const siri = document.querySelector("#siri");
 const startButton = document.querySelector(".start-btn");
+const restartButton = document.querySelector(".restart-btn");
 
 // MARCA PONTOS
 let userPoints = 0;
@@ -106,6 +107,17 @@ const disableButton = (button1, button2, button3, button4) => {
   button4.style.cursor = "pointer";
 };
 
+// FUNÇÃO REINICIAR PLACAR
+const reset = () => {
+  userPoints = 0;
+  machinePoints = 0;
+  userScore.innerHTML = 0;
+  machineScore.innerHTML = 0;
+  userChoice.style.visibility = "hidden";
+  machineChoice.style.visibility = "hidden";
+  result.innerHTML = "Faça sua escolha. Boa sorte!";
+};
+
 // EVENTOS
 paper.addEventListener("click", () => {
   userMove("paper");
@@ -135,3 +147,4 @@ siri.addEventListener("click", () => {
 startButton.addEventListener("click", () => {
   setUsername(usernameInput.value);
 });
+restartButton.addEventListener("click", reset);
